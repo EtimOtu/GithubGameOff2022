@@ -1,0 +1,18 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-GithubGameJam-0013.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\GithubGameJamEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\GithubGameJam.cpp.obj"
+"C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\GithubGameJamCharacter.cpp.obj"
+"C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\GithubGameJamGameMode.cpp.obj"
+"C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\GithubGameJam.init.gen.cpp.obj"
+"C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\GithubGameJamCharacter.gen.cpp.obj"
+"C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\GithubGameJamGameMode.gen.cpp.obj"
+"C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\Default.rc2.res"
+/OUT:"C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\UE4Editor-GithubGameJam-0013.lib"
+/INCLUDE:IMPLEMENT_MODULE_GithubGameJam

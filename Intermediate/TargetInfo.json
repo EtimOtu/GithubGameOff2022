@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "GithubGameJam",
+			"Path": "C:\\Users\\Etim Otu\\Documents\\Unreal Projects\\GithubGameJam\\Source\\GithubGameJam.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "GithubGameJamEditor",
+			"Path": "C:\\Users\\Etim Otu\\Documents\\Unreal Projects\\GithubGameJam\\Source\\GithubGameJamEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
