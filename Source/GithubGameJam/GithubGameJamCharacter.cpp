@@ -7,6 +7,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "TimerManager.h"
+#include "Perception/AIPerceptionStimuliSourceComponent.h"
+#include "Perception/AISense_Sight.h"
 
 AGithubGameJamCharacter::AGithubGameJamCharacter()
 {
@@ -23,7 +25,7 @@ AGithubGameJamCharacter::AGithubGameJamCharacter()
 	CameraBoom->SetupAttachment(RootComponent);
 	CameraBoom->SetUsingAbsoluteRotation(true); // Rotation of the character should not affect rotation of boom
 	CameraBoom->bDoCollisionTest = false;
-	CameraBoom->TargetArmLength = 500.f;
+	CameraBoom->TargetArmLength = 1000.f;
 	CameraBoom->SocketOffset = FVector(0.f,0.f,75.f);
 	CameraBoom->SetRelativeRotation(FRotator(0.f,180.f,0.f));
 
@@ -50,6 +52,7 @@ AGithubGameJamCharacter::AGithubGameJamCharacter()
 	SprintSpeed = 1000.f;
 
 	CanDash = true;
+	//facingRight = true;
 	DashDistance = 2000.f;
 	DashCooldown = 1.25f;
 	DashStop = 0.1f;
@@ -57,6 +60,9 @@ AGithubGameJamCharacter::AGithubGameJamCharacter()
 	MaxAmmo = 11;
 	CurrentAmmo = MaxAmmo;
 	canShoot = true;
+	power = 1;
+
+	setup_stimulus();
 }
 
 void AGithubGameJamCharacter::DoubleJump()
@@ -83,7 +89,15 @@ void AGithubGameJamCharacter::Dash()
 	if (CanDash)
 	{
 		GetCharacterMovement()->BrakingFrictionFactor = 0.f;
-		LaunchCharacter(FVector(GetMesh()->GetForwardVector().Y, GetMesh()->GetForwardVector().X, 0).GetSafeNormal() * DashDistance, true, true);
+		if (facingRight)
+		{
+			LaunchCharacter(FVector(GetMesh()->GetForwardVector().Y, GetMesh()->GetForwardVector().X, 0).GetSafeNormal() * DashDistance, true, true);
+		}
+		else if (!facingRight)
+		{
+			LaunchCharacter(FVector(GetMesh()->GetForwardVector().Y, GetMesh()->GetForwardVector().X, 0).GetSafeNormal() * DashDistance * -1, true, true);
+		}
+		
 		CanDash = false;
 		GetWorldTimerManager().SetTimer(UnusedHandle, this, &AGithubGameJamCharacter::StopDashing, DashStop, false);
 	}
@@ -110,6 +124,29 @@ void AGithubGameJamCharacter::Reload()
 {
 	CurrentAmmo = MaxAmmo;
 	canShoot = true;
+}
+
+void AGithubGameJamCharacter::FaceRight()
+{
+	//Scale should equal 1
+	//FVector NewScale = GetActorScale3D();
+	//NewScale.Y = 1;
+	GetMesh()->SetWorldScale3D(FVector(1, 1, 1));
+	facingRight = true;
+}
+
+void AGithubGameJamCharacter::FaceLeft()
+{
+	//Scale should be -1
+	GetMesh()->SetWorldScale3D(FVector(1,-1, 1));
+	facingRight = false;
+}
+
+void AGithubGameJamCharacter::setup_stimulus()
+{
+	stimulus = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("stimulus"));
+	stimulus->RegisterForSense(TSubclassOf<UAISense_Sight>());
+	stimulus->RegisterWithPerceptionSystem();
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -140,11 +177,13 @@ void AGithubGameJamCharacter::MoveRight(float Value)
 	//Snap rotation to movement direction
 	if (Value > 0.f)
 	{
-		SetActorRotation(FRotator(0.0f, -90.f, 0.f), ETeleportType::None);
+		//SetActorRotation(FRotator(0.0f, -90, 0.f), ETeleportType::None);
+		FaceRight();
 	}
 	else if (Value < 0.f)
 	{
-		SetActorRotation(FRotator(0.0f, 90.0f, 0.0f), ETeleportType::None);
+		//SetActorRotation(FRotator(0.0f, 90.0f, 0.0f), ETeleportType::None);
+		FaceLeft();
 	}
 
 	// add movement in that direction

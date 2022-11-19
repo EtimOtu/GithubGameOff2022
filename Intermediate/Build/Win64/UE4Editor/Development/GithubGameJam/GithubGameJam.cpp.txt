@@ -1,2 +1,2 @@
-C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\Definitions.GithubGameJam.h
-C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Source\GithubGameJam\GithubGameJam.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\Definitions.GithubGameJam.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\GithubGameJam.h

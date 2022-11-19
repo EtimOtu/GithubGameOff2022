@@ -1,11 +1,6 @@
-﻿  Building GithubGameJamEditor...
-  Using Visual Studio 2019 14.29.30146 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 6 processes...
-    [1/4] GithubGameJamCharacter.cpp
-    [2/4] UE4Editor-GithubGameJam-0023.lib
-       Creating library C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\UE4Editor-GithubGameJam-0023.lib and object C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\UE4Editor-GithubGameJam-0023.exp
-    [3/4] UE4Editor-GithubGameJam-0023.dll
-       Creating library C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\UE4Editor-GithubGameJam-0023.suppressed.lib and object C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Intermediate\Build\Win64\UE4Editor\Development\GithubGameJam\UE4Editor-GithubGameJam-0023.suppressed.exp
-    [4/4] GithubGameJamEditor.target
-  Total time in Parallel executor: 14.40 seconds
-  Total execution time: 15.30 seconds
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022).
+  Parsing headers for GithubGameJamEditor
+    Running UnrealHeaderTool "C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\GithubGameJam.uproject" "C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Intermediate\Build\Win64\GithubGameJamEditor\Development\GithubGameJamEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Etim Otu\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for GithubGameJamEditor in 4.4998145 seconds
+UnrealBuildTool : error : Unable to start regular build while Live Coding is active. Press Ctrl+Alt+F11 to trigger a Live Coding compile.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(45,5): error MSB3073: The command ""C:\Program Files\Epic Games\UE_4.26\Engine\Build\BatchFiles\Build.bat" GithubGameJamEditor Win64 Development -Project="C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\GithubGameJam.uproject" -WaitMutex -FromMsBuild" exited with code 6.

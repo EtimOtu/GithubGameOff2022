@@ -13,9 +13,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GITHUBGAMEJAM_GithubGameJamCharacter_generated_h
 
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_SPARSE_DATA
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_RPC_WRAPPERS \
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_SPARSE_DATA
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execFaceLeft); \
+	DECLARE_FUNCTION(execFaceRight); \
 	DECLARE_FUNCTION(execReload); \
 	DECLARE_FUNCTION(execResetDashCooldown); \
 	DECLARE_FUNCTION(execStopDashing); \
@@ -25,8 +27,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execDoubleJump);
 
 
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execFaceLeft); \
+	DECLARE_FUNCTION(execFaceRight); \
 	DECLARE_FUNCTION(execReload); \
 	DECLARE_FUNCTION(execResetDashCooldown); \
 	DECLARE_FUNCTION(execStopDashing); \
@@ -36,9 +40,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execDoubleJump);
 
 
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_EVENT_PARMS
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_CALLBACK_WRAPPERS
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_INCLASS_NO_PURE_DECLS \
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_EVENT_PARMS \
+	struct GithubGameJamCharacter_eventDamaged_Parms \
+	{ \
+		int32 Damage; \
+	};
+
+
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_CALLBACK_WRAPPERS
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGithubGameJamCharacter(); \
 	friend struct Z_Construct_UClass_AGithubGameJamCharacter_Statics; \
@@ -47,7 +57,7 @@ public: \
 	DECLARE_SERIALIZER(AGithubGameJamCharacter)
 
 
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_INCLASS \
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_INCLASS \
 private: \
 	static void StaticRegisterNativesAGithubGameJamCharacter(); \
 	friend struct Z_Construct_UClass_AGithubGameJamCharacter_Statics; \
@@ -56,7 +66,7 @@ public: \
 	DECLARE_SERIALIZER(AGithubGameJamCharacter)
 
 
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_STANDARD_CONSTRUCTORS \
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AGithubGameJamCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AGithubGameJamCharacter) \
@@ -69,7 +79,7 @@ private: \
 public:
 
 
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_ENHANCED_CONSTRUCTORS \
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AGithubGameJamCharacter(AGithubGameJamCharacter&&); \
@@ -80,37 +90,37 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGithubGameJamCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AGithubGameJamCharacter)
 
 
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__SideViewCameraComponent() { return STRUCT_OFFSET(AGithubGameJamCharacter, SideViewCameraComponent); } \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(AGithubGameJamCharacter, CameraBoom); }
 
 
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_9_PROLOG \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_EVENT_PARMS
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_9_PROLOG \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_EVENT_PARMS
 
 
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_GENERATED_BODY_LEGACY \
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_SPARSE_DATA \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_RPC_WRAPPERS \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_CALLBACK_WRAPPERS \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_INCLASS \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_STANDARD_CONSTRUCTORS \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_SPARSE_DATA \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_RPC_WRAPPERS \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_CALLBACK_WRAPPERS \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_INCLASS \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_GENERATED_BODY \
+#define GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_SPARSE_DATA \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_CALLBACK_WRAPPERS \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_INCLASS_NO_PURE_DECLS \
-	GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h_12_ENHANCED_CONSTRUCTORS \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_SPARSE_DATA \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_CALLBACK_WRAPPERS \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_INCLASS_NO_PURE_DECLS \
+	GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -118,7 +128,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> GITHUBGAMEJAM_API UClass* StaticClass<class AGithubGameJamCharacter>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID GithubGameJam_Source_GithubGameJam_GithubGameJamCharacter_h
+#define CURRENT_FILE_ID GithubGameOff2022_Source_GithubGameJam_GithubGameJamCharacter_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

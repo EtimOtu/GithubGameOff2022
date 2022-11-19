@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GithubGameJam.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{8916EC96-9237-4269-9CB0-E340A428F4F7}</UniqueIdentifier>
+      <UniqueIdentifier>{91D74B8A-E3C7-4888-BE65-D08207691363}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GithubGameJam.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,11 @@
     <None Include="..\..\Source\GithubGameJamEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\Frank_Fighting_Set3.PNG" />
     <Filter Include="Config">
-      <UniqueIdentifier>{E6E6B5F0-C95B-4C8A-B6D6-E602AEB6FABA}</UniqueIdentifier>
+      <UniqueIdentifier>{D49A07BA-8A54-48EA-BA62-64B54909B4D7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +33,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GithubGameJam">
-      <UniqueIdentifier>{1B2B1EBC-5946-4207-84E5-FC225331191A}</UniqueIdentifier>
+      <UniqueIdentifier>{EC489CE0-E918-4D02-B00E-D5A37B56E1B5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GithubGameJam\GithubGameJam.Build.cs">
       <Filter>Source\GithubGameJam</Filter>
@@ -52,6 +55,75 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\GithubGameJam\GithubGameJamGameMode.h">
       <Filter>Source\GithubGameJam</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GithubGameJam\IsPlayerInMeleeRange.cpp">
+      <Filter>Source\GithubGameJam</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GithubGameJam\IsPlayerInMeleeRange.h">
+      <Filter>Source\GithubGameJam</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GithubGameJam\MyCharacterTest.cpp">
+      <Filter>Source\GithubGameJam</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GithubGameJam\MyCharacterTest.h">
+      <Filter>Source\GithubGameJam</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GithubGameJam\PlayerCharacter.cpp">
+      <Filter>Source\GithubGameJam</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GithubGameJam\PlayerCharacter.h">
+      <Filter>Source\GithubGameJam</Filter>
+    </ClInclude>
+    <Filter Include="Source\GithubGameJam\Enemy">
+      <UniqueIdentifier>{859925F9-3044-4ED3-8BA5-7D326789C28C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GithubGameJam\Enemy\EnemyBase.cpp">
+      <Filter>Source\GithubGameJam\Enemy</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GithubGameJam\Enemy\EnemyBase.h">
+      <Filter>Source\GithubGameJam\Enemy</Filter>
+    </ClInclude>
+    <Filter Include="Source\GithubGameJam\Enemy\AI">
+      <UniqueIdentifier>{0CE531E4-8E26-4B19-B9FF-235F16C2EC62}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GithubGameJam\Enemy\AI\Blackboard_Keys.h">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GithubGameJam\Enemy\AI\ChasePlayer.cpp">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GithubGameJam\Enemy\AI\ChasePlayer.h">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GithubGameJam\Enemy\AI\CombatInterface.cpp">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GithubGameJam\Enemy\AI\CombatInterface.h">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GithubGameJam\Enemy\AI\EnemyAiController.cpp">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GithubGameJam\Enemy\AI\EnemyAiController.h">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GithubGameJam\Enemy\AI\FindPlayerLocation.cpp">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GithubGameJam\Enemy\AI\FindPlayerLocation.h">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GithubGameJam\Enemy\AI\FindRandomLocation.cpp">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GithubGameJam\Enemy\AI\FindRandomLocation.h">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GithubGameJam\Enemy\AI\MeleeAttack.cpp">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GithubGameJam\Enemy\AI\MeleeAttack.h">
+      <Filter>Source\GithubGameJam\Enemy\AI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

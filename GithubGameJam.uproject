@@ -1,13 +1,3 @@
-{
-	"FileVersion": 3,
-	"EngineAssociation": "4.26",
-	"Category": "",
-	"Description": "",
-	"Modules": [
-		{
-			"Name": "GithubGameJam",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8454aa847f8edcadff8bf9e02d73571afed066966c707915a0adb3e750bb8756
+size 275

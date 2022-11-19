@@ -99,9 +99,40 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 		void FireGun();
 
+	//Change to BlueprintImplementableEvent When you have created the Reload Animation
 	UFUNCTION(BlueprintCallable)
 		void Reload();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		bool canShoot;
+
+	UFUNCTION()
+		void FaceRight();
+
+	UFUNCTION()
+		void FaceLeft();
+
+	UPROPERTY()
+		bool facingRight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float power;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int currentHealth;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int MaxHealth;
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+		void Damaged(int Damage);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+		void Death();
+
+private:
+	class UAIPerceptionStimuliSourceComponent* stimulus;
+
+	void setup_stimulus();
+
 };

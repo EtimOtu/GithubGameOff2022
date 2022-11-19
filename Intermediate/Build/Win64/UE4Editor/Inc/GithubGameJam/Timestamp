@@ -1,2 +1,12 @@
-C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Source\GithubGameJam\GithubGameJamCharacter.h
-C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\Source\GithubGameJam\GithubGameJamGameMode.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\Enemy\AI\ChasePlayer.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\Enemy\AI\FindPlayerLocation.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\Enemy\AI\EnemyAiController.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\Enemy\AI\FindRandomLocation.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\Enemy\AI\MeleeAttack.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\Enemy\EnemyBase.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\GithubGameJamGameMode.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\IsPlayerInMeleeRange.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\MyCharacterTest.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\PlayerCharacter.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\GithubGameJamCharacter.h
+C:\Users\Etim Otu\Documents\Unreal Projects\GithubGameJam\GithubGameOff2022\Source\GithubGameJam\Enemy\AI\CombatInterface.h

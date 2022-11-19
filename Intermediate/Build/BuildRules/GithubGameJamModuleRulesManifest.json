@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\Etim Otu\\Documents\\Unreal Projects\\GithubGameJam\\Source\\GithubGameJam\\GithubGameJam.Build.cs",
-		"C:\\Users\\Etim Otu\\Documents\\Unreal Projects\\GithubGameJam\\Source\\GithubGameJam.Target.cs",
-		"C:\\Users\\Etim Otu\\Documents\\Unreal Projects\\GithubGameJam\\Source\\GithubGameJamEditor.Target.cs"
+		"C:\\Users\\Etim Otu\\Documents\\Unreal Projects\\GithubGameJam\\GithubGameOff2022\\Source\\GithubGameJam\\GithubGameJam.Build.cs",
+		"C:\\Users\\Etim Otu\\Documents\\Unreal Projects\\GithubGameJam\\GithubGameOff2022\\Source\\GithubGameJam.Target.cs",
+		"C:\\Users\\Etim Otu\\Documents\\Unreal Projects\\GithubGameJam\\GithubGameOff2022\\Source\\GithubGameJamEditor.Target.cs"
 	],
 	"EngineVersion": "4.26.2"
 }

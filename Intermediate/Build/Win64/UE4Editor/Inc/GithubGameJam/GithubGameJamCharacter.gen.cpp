@@ -21,6 +21,20 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 // End Cross Module References
+	DEFINE_FUNCTION(AGithubGameJamCharacter::execFaceLeft)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->FaceLeft();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AGithubGameJamCharacter::execFaceRight)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->FaceRight();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AGithubGameJamCharacter::execReload)
 	{
 		P_FINISH;
@@ -70,6 +84,18 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 		P_THIS->DoubleJump();
 		P_NATIVE_END;
 	}
+	static FName NAME_AGithubGameJamCharacter_Damaged = FName(TEXT("Damaged"));
+	void AGithubGameJamCharacter::Damaged(int32 Damage)
+	{
+		GithubGameJamCharacter_eventDamaged_Parms Parms;
+		Parms.Damage=Damage;
+		ProcessEvent(FindFunctionChecked(NAME_AGithubGameJamCharacter_Damaged),&Parms);
+	}
+	static FName NAME_AGithubGameJamCharacter_Death = FName(TEXT("Death"));
+	void AGithubGameJamCharacter::Death()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AGithubGameJamCharacter_Death),NULL);
+	}
 	static FName NAME_AGithubGameJamCharacter_FireGun = FName(TEXT("FireGun"));
 	void AGithubGameJamCharacter::FireGun()
 	{
@@ -81,6 +107,8 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "Dash", &AGithubGameJamCharacter::execDash },
 			{ "DoubleJump", &AGithubGameJamCharacter::execDoubleJump },
+			{ "FaceLeft", &AGithubGameJamCharacter::execFaceLeft },
+			{ "FaceRight", &AGithubGameJamCharacter::execFaceRight },
 			{ "Reload", &AGithubGameJamCharacter::execReload },
 			{ "ResetDashCooldown", &AGithubGameJamCharacter::execResetDashCooldown },
 			{ "Sprint", &AGithubGameJamCharacter::execSprint },
@@ -88,6 +116,34 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 			{ "Walk", &AGithubGameJamCharacter::execWalk },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics
+	{
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Damage;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GithubGameJamCharacter_eventDamaged_Parms, Damage), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics::NewProp_Damage,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GithubGameJamCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGithubGameJamCharacter, nullptr, "Damaged", nullptr, nullptr, sizeof(GithubGameJamCharacter_eventDamaged_Parms), Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGithubGameJamCharacter_Damaged()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGithubGameJamCharacter_Damaged_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AGithubGameJamCharacter_Dash_Statics
 	{
@@ -111,6 +167,28 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AGithubGameJamCharacter_Death_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGithubGameJamCharacter_Death_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GithubGameJamCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGithubGameJamCharacter_Death_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGithubGameJamCharacter, nullptr, "Death", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGithubGameJamCharacter_Death_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGithubGameJamCharacter_Death_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGithubGameJamCharacter_Death()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGithubGameJamCharacter_Death_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AGithubGameJamCharacter_DoubleJump_Statics
 	{
 #if WITH_METADATA
@@ -130,6 +208,50 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGithubGameJamCharacter_DoubleJump_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AGithubGameJamCharacter_FaceLeft_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGithubGameJamCharacter_FaceLeft_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GithubGameJamCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGithubGameJamCharacter_FaceLeft_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGithubGameJamCharacter, nullptr, "FaceLeft", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGithubGameJamCharacter_FaceLeft_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGithubGameJamCharacter_FaceLeft_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGithubGameJamCharacter_FaceLeft()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGithubGameJamCharacter_FaceLeft_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AGithubGameJamCharacter_FaceRight_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGithubGameJamCharacter_FaceRight_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GithubGameJamCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGithubGameJamCharacter_FaceRight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGithubGameJamCharacter, nullptr, "FaceRight", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGithubGameJamCharacter_FaceRight_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGithubGameJamCharacter_FaceRight_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGithubGameJamCharacter_FaceRight()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGithubGameJamCharacter_FaceRight_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -164,7 +286,9 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGithubGameJamCharacter_Reload_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Change to BlueprintImplementableEvent When you have created the Reload Animation\n" },
 		{ "ModuleRelativePath", "GithubGameJamCharacter.h" },
+		{ "ToolTip", "Change to BlueprintImplementableEvent When you have created the Reload Animation" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGithubGameJamCharacter_Reload_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGithubGameJamCharacter, nullptr, "Reload", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGithubGameJamCharacter_Reload_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGithubGameJamCharacter_Reload_Statics::Function_MetaDataParams)) };
@@ -334,6 +458,23 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 #endif
 		static void NewProp_canShoot_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_canShoot;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_facingRight_MetaData[];
+#endif
+		static void NewProp_facingRight_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_facingRight;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_power_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_power;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_currentHealth_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_currentHealth;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxHealth_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MaxHealth;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -343,10 +484,14 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_GithubGameJam,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AGithubGameJamCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AGithubGameJamCharacter_Damaged, "Damaged" }, // 1421853742
 		{ &Z_Construct_UFunction_AGithubGameJamCharacter_Dash, "Dash" }, // 2885658479
+		{ &Z_Construct_UFunction_AGithubGameJamCharacter_Death, "Death" }, // 1976990396
 		{ &Z_Construct_UFunction_AGithubGameJamCharacter_DoubleJump, "DoubleJump" }, // 253517250
+		{ &Z_Construct_UFunction_AGithubGameJamCharacter_FaceLeft, "FaceLeft" }, // 419486578
+		{ &Z_Construct_UFunction_AGithubGameJamCharacter_FaceRight, "FaceRight" }, // 1362517809
 		{ &Z_Construct_UFunction_AGithubGameJamCharacter_FireGun, "FireGun" }, // 2797238508
-		{ &Z_Construct_UFunction_AGithubGameJamCharacter_Reload, "Reload" }, // 3750626285
+		{ &Z_Construct_UFunction_AGithubGameJamCharacter_Reload, "Reload" }, // 4226738175
 		{ &Z_Construct_UFunction_AGithubGameJamCharacter_ResetDashCooldown, "ResetDashCooldown" }, // 2013711190
 		{ &Z_Construct_UFunction_AGithubGameJamCharacter_Sprint, "Sprint" }, // 1356721236
 		{ &Z_Construct_UFunction_AGithubGameJamCharacter_StopDashing, "StopDashing" }, // 2722274595
@@ -470,6 +615,37 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 		((AGithubGameJamCharacter*)Obj)->canShoot = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_canShoot = { "canShoot", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AGithubGameJamCharacter), &Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_canShoot_SetBit, METADATA_PARAMS(Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_canShoot_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_canShoot_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_facingRight_MetaData[] = {
+		{ "ModuleRelativePath", "GithubGameJamCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_facingRight_SetBit(void* Obj)
+	{
+		((AGithubGameJamCharacter*)Obj)->facingRight = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_facingRight = { "facingRight", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AGithubGameJamCharacter), &Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_facingRight_SetBit, METADATA_PARAMS(Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_facingRight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_facingRight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_power_MetaData[] = {
+		{ "Category", "GithubGameJamCharacter" },
+		{ "ModuleRelativePath", "GithubGameJamCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_power = { "power", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGithubGameJamCharacter, power), METADATA_PARAMS(Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_power_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_power_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_currentHealth_MetaData[] = {
+		{ "Category", "GithubGameJamCharacter" },
+		{ "ModuleRelativePath", "GithubGameJamCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_currentHealth = { "currentHealth", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGithubGameJamCharacter, currentHealth), METADATA_PARAMS(Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_currentHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_currentHealth_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_MaxHealth_MetaData[] = {
+		{ "Category", "GithubGameJamCharacter" },
+		{ "ModuleRelativePath", "GithubGameJamCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_MaxHealth = { "MaxHealth", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGithubGameJamCharacter, MaxHealth), METADATA_PARAMS(Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_MaxHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_MaxHealth_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGithubGameJamCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_SideViewCameraComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_CameraBoom,
@@ -485,6 +661,10 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_MaxAmmo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_CurrentAmmo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_canShoot,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_facingRight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_power,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_currentHealth,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGithubGameJamCharacter_Statics::NewProp_MaxHealth,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGithubGameJamCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AGithubGameJamCharacter>::IsAbstract,
@@ -513,7 +693,7 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJamCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGithubGameJamCharacter, 2213883278);
+	IMPLEMENT_CLASS(AGithubGameJamCharacter, 2261845861);
 	template<> GITHUBGAMEJAM_API UClass* StaticClass<AGithubGameJamCharacter>()
 	{
 		return AGithubGameJamCharacter::StaticClass();
