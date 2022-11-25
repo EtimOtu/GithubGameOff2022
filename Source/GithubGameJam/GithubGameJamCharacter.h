@@ -130,6 +130,12 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 		void Death();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UAnimMontage* ReloadMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool canMove;
+
 private:
 	class UAIPerceptionStimuliSourceComponent* stimulus;
 

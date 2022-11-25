@@ -56,6 +56,7 @@ AGithubGameJamCharacter::AGithubGameJamCharacter()
 	DashDistance = 2000.f;
 	DashCooldown = 1.25f;
 	DashStop = 0.1f;
+	canMove = true;
 
 	MaxAmmo = 11;
 	CurrentAmmo = MaxAmmo;
@@ -86,7 +87,7 @@ void AGithubGameJamCharacter::Walk()
 
 void AGithubGameJamCharacter::Dash()
 {
-	if (CanDash)
+	if (CanDash && canMove)
 	{
 		GetCharacterMovement()->BrakingFrictionFactor = 0.f;
 		if (facingRight)
@@ -122,6 +123,7 @@ void AGithubGameJamCharacter::ResetDashCooldown()
 
 void AGithubGameJamCharacter::Reload()
 {
+	//PlayAnimMontage(ReloadMontage);
 	CurrentAmmo = MaxAmmo;
 	canShoot = true;
 }
@@ -174,20 +176,24 @@ void AGithubGameJamCharacter::Landed(const FHitResult& Hit)
 
 void AGithubGameJamCharacter::MoveRight(float Value)
 {
-	//Snap rotation to movement direction
-	if (Value > 0.f)
+	
+	if (canMove)
 	{
-		//SetActorRotation(FRotator(0.0f, -90, 0.f), ETeleportType::None);
-		FaceRight();
-	}
-	else if (Value < 0.f)
-	{
-		//SetActorRotation(FRotator(0.0f, 90.0f, 0.0f), ETeleportType::None);
-		FaceLeft();
-	}
+		//Snap rotation to movement direction
+		if (Value > 0.f)
+		{
+			//SetActorRotation(FRotator(0.0f, -90, 0.f), ETeleportType::None);
+			FaceRight();
+		}
+		else if (Value < 0.f)
+		{
+			//SetActorRotation(FRotator(0.0f, 90.0f, 0.0f), ETeleportType::None);
+			FaceLeft();
+		}
 
-	// add movement in that direction
-	AddMovementInput(FVector(0.f,-1.f,0.f), Value);
+		// add movement in that direction
+		AddMovementInput(FVector(0.f, -1.f, 0.f), Value);
+	}
 }
 
 void AGithubGameJamCharacter::TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location)

@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeGithubGameJam_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xEACF04E6,
+				0xD7616490,
 				0x08959587,
 				METADATA_PARAMS(nullptr, 0)
 			};
